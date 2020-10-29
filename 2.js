@@ -1,8 +1,5 @@
 function hasThisProperty(obj, string) {
-    for(let key in obj)
-        if(obj.hasOwnProperty(key) && key == string)
-            return true;
-    return false;
+    return string in obj;
 }
 
 const user = {
@@ -13,3 +10,5 @@ const user = {
 };
 
 console.log(hasThisProperty(user, "name"));
+
+// Задание выполнено верно, но можно было сделать то же самое проще. Выше показала, как
